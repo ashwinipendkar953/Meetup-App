@@ -1,9 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
 .height-40 {
   height: 40px;
 }
 
 .peach-text {
   color: rgba(246, 88, 88, 1);
+}
+
+.blue-text {
+  color: #00798a !important;
 }
 
 .text-black:hover {
@@ -22,9 +34,15 @@
   border-color: rgba(246, 88, 88, 1);
 }
 
+.border-blue {
+  border-color: #00798a !important;
+  border-width: 2px !important;
+}
+
 .btn-peach {
   background-color: rgba(246, 88, 88, 1) !important;
   color: white !important;
+  font-weight: 500 !important;
 }
 
 .btn-blue {
@@ -37,6 +55,11 @@
   background-color: #00798a;
   border-color: #00798a;
   font-weight: 500;
+}
+
+.btn-lightBlue {
+  background-color: rgba(219, 237, 240, 1) !important;
+  font-weight: 500 !important;
 }
 
 .icon-large {
