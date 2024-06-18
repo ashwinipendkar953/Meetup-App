@@ -5,7 +5,7 @@ import { BiSearch } from "react-icons/bi";
 const Header = () => {
   return (
     <header className="">
-      <nav className="navbar navbar-expand-lg fixed-top border-bottom">
+      <nav className="navbar navbar-expand-lg sticky-top border-bottom">
         <div className="container-fluid mx-3 d-flex justify-content-between align-items-center">
           <Link className="navbar-brand" to="/">
             <img
@@ -27,28 +27,28 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <div className="mx-lg-5 my-1">
-              <form className="d-flex " role="search">
-                <div className="input-group ">
+              <form className="d-flex w-100" role="search">
+                <div className="input-group">
                   <input
-                    className="form-control text-secondary"
+                    className="form-control text-secondary height-40"
                     type="search"
                     placeholder="Search events"
                     aria-label="Search"
                   />
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control height-40"
                     placeholder="Neighborhood, city or zip"
                     aria-label="Neighborhood, city or zip"
                     aria-describedby="location"
                   />
                   <button
-                    className="btn border-peach btn-peach"
+                    className="btn border-peach btn-peach height-40"
                     type="button"
                     id="location"
                     style={{ width: "50px" }}
                   >
-                    <BiSearch size={"1.5em"} />
+                    <BiSearch className="icon-large" />
                   </button>
                 </div>
               </form>
@@ -57,15 +57,11 @@ const Header = () => {
               <Link
                 to="/"
                 type="button"
-                className="text-decoration-none text-black fw-semibold mx-3"
+                className="text-decoration-none text-black fw-semibold me-3"
               >
                 Log in
               </Link>
-              <Link
-                to="/"
-                type="button"
-                className="text-decoration-none btn-blue"
-              >
+              <Link to="/" type="button" className="btn-blue">
                 Sign Up
               </Link>
             </div>

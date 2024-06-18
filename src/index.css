@@ -1,3 +1,7 @@
+.height-40 {
+  height: 40px;
+}
+
 .peach-text {
   color: rgba(246, 88, 88, 1);
 }
@@ -8,6 +12,10 @@
 
 .bg-peach {
   background-color: rgba(246, 88, 88, 1);
+}
+
+.bg-lightBlue {
+  background-color: rgba(219, 237, 240, 1);
 }
 
 .border-peach {
@@ -21,6 +29,7 @@
 
 .btn-blue {
   border-radius: 8px;
+  text-decoration: none;
   cursor: pointer;
   color: #fff;
   fill: #fff;
@@ -30,10 +39,27 @@
   font-weight: 500;
 }
 
+.icon-large {
+  font-size: 1.5em;
+}
+
 input[type="search"] {
   width: 100%;
-  background-image: url("./assets/icons8-search-30.png");
-  background-position: 10px 10px;
+  background-image: url("./assets/icons8-search-25.png");
+  background-position: 10px 7px;
   background-repeat: no-repeat;
-  padding: 12px 30px 12px 50px;
+  padding: 12px 20px 12px 40px;
+}
+
+.card {
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.bg-footer {
+  background-color: rgba(33, 33, 33, 1);
 }
