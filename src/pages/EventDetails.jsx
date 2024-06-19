@@ -71,19 +71,13 @@ const EventDetails = () => {
 
                 <section>
                   <h3 className="fw-bold">Event Tags:</h3>
-                  <div>
-                    <Link
-                      type="button"
-                      className="btn btn-lightBlue rounded-3 me-2"
-                    >
+                  <div className="py-2">
+                    <span className="bg-lightBlue rounded-3 me-2 p-2">
                       Web Development
-                    </Link>
-                    <Link
-                      type="button"
-                      className="btn btn-lightBlue rounded-3 me-2"
-                    >
+                    </span>
+                    <span className="bg-lightBlue rounded-3 me-2 p-2">
                       Software Development
-                    </Link>
+                    </span>
                   </div>
                 </section>
               </div>
