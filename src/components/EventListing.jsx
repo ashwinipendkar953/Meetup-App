@@ -7,25 +7,16 @@ import { Link } from "react-router-dom";
 const EventListing = () => {
   return (
     <section className="py-2">
-      <div className="row d-flex justify-content-between">
-        <div className="col-md-6">
-          <h2 className="display-6 fw-bold">Meetup Events</h2>
-        </div>
-        <div className="col-md-6">
-          <form className="d-flex " role="search">
-            <input
-              className="form-control me-2 text-secondary height-40"
-              type="search"
-              placeholder="Search events"
-              aria-label="Search"
-            />
-            <select className="form-select height-40">
-              <option value="">Select Event Type</option>
-              <option value="online">Online</option>
-              <option value="offline">Offline</option>
-            </select>
-          </form>
-        </div>
+      <div className=" d-md-flex justify-content-between">
+        <h2 className="display-6 fw-bold">Meetup Events</h2>
+
+        <form className="d-flex w-25" role="search">
+          <select className="form-select height-40">
+            <option value="">Select Event Type</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+        </form>
       </div>
 
       <div className="row g-4 p-4">
