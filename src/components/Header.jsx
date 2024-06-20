@@ -25,8 +25,8 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <div className="d-flex me-2 ms-auto justify-content-center align-items-center">
-              <form className="d-flex " role="search">
+            <div className="d-lg-flex ms-auto align-items-center">
+              <form className="d-flex py-1" role="search">
                 <input
                   className="form-control me-2 text-secondary height-40"
                   type="search"
@@ -34,6 +34,7 @@ const Header = () => {
                   aria-label="Search"
                 />
               </form>
+
               <Link
                 to="/"
                 type="button"
