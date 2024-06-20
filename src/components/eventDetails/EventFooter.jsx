@@ -20,7 +20,7 @@ const EventFooter = ({ event }) => {
         </div>
         <div className="d-flex justify-content-center align-items-center">
           {isEventFree ? (
-            "Free"
+            <p className="fw-bold mb-0">Free</p>
           ) : (
             <div className="d-flex mx-2">
               <BiRupee className="icon-large" />

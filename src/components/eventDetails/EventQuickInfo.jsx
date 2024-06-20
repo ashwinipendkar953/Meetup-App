@@ -10,6 +10,7 @@ const EventQuickInfo = ({ event }) => {
     eventStartDateTime,
     eventEndDateTime,
     eventAddress,
+    isEventFree,
     eventCost,
     speakers,
   } = event;
@@ -37,10 +38,14 @@ const EventQuickInfo = ({ event }) => {
               <p className="mb-0">{eventAddress}</p>
             </div>
           </div>
-          <div className="d-flex text-secondary">
-            <BiRupee className="icon-large " />
-            <p className="mb-0">3000</p>
-          </div>
+          {isEventFree ? (
+            <p className="fw-bold mb-0">Free</p>
+          ) : (
+            <div className="d-flex text-secondary">
+              <BiRupee className="icon-large " />
+              <p className="mb-0">{eventCost}</p>
+            </div>
+          )}
         </div>
       </div>
       <hr />

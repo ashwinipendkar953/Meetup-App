@@ -6,17 +6,23 @@ const EventSpeakers = ({ speakers }) => {
         {speakers &&
           speakers.length > 0 &&
           speakers.map((speaker) => (
-            <div className="col-sm-6" key={speaker._id}>
-              <div className="card border-0 rounded-4">
-                <div className="card-body text-center p-3">
-                  <img
-                    src={speaker.imageUrl}
-                    alt={`${speaker.name} image`}
-                    className="img-fluid rounded-circle"
-                    style={{ width: "72px", height: "72px" }}
-                  />
-                  <p className="mb-0 fw-bold">{speaker.name}</p>
-                  <p className="mb-0">{speaker.designation}</p>
+            <div className="col-lg-12 col-md-6 col-12" key={speaker._id}>
+              <div className="card h-100">
+                <div className="row">
+                  <div className="col-5">
+                    <img
+                      src={speaker.imageUrl}
+                      alt={`${speaker.name} image`}
+                      className="img-fluid w-100"
+                      style={{ height: "120px" }}
+                    />
+                  </div>
+                  <div className="col-7">
+                    <div className="card-body">
+                      <p className="card-text mb-0 fw-bold">{speaker.name}</p>
+                      <p className="card-text mb-0">{speaker.designation}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 const EventDetailsSection = ({ event }) => {
   const {
+    eventTitle,
     eventImageUrl,
     eventDescription,
     eventDressCode,
@@ -9,7 +10,7 @@ const EventDetailsSection = ({ event }) => {
   return (
     <div className="col-lg-7 mt-0">
       <picture>
-        <img src={eventImageUrl} alt="" className="img-fluid w-100" />
+        <img src={eventImageUrl} alt={eventTitle} className="img-fluid w-100" />
       </picture>
       {/* event details */}
       <section className="mt-4">
@@ -33,9 +34,12 @@ const EventDetailsSection = ({ event }) => {
       <section>
         <h3 className="fw-bold">Event Tags:</h3>
 
-        <div className="py-2">
+        <div className="row py-2">
           {eventTags.map((tag, index) => (
-            <span key={index} className="bg-lightBlue rounded-3 me-2 py-2 px-3">
+            <span
+              key={index}
+              className="bg-lightBlue col-3 w-auto mb-2 rounded-3 me-2 py-2 px-3"
+            >
               {tag}
             </span>
           ))}

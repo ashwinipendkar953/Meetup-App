@@ -6,11 +6,19 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { BiRupee } from "react-icons/bi";
 import { getDateAndTime } from "../utils/dateTimeFormatter";
+import { useState } from "react";
 
 const EventCardDisplay = () => {
   const { data, loading } = useFetch(
     "https://meetup-api-psi.vercel.app/api/events"
   );
+
+  const [selectedEventType, setSelectedEventType] = useState("");
+
+  const filteredEventData =
+    selectedEventType === ""
+      ? data
+      : data.filter((event) => event.eventType === selectedEventType);
 
   return (
     <>
@@ -33,7 +41,10 @@ const EventCardDisplay = () => {
             <h2 className="display-6 fw-bold">Meetup Events</h2>
 
             <form className="d-flex w-25" role="search">
-              <select className="form-select height-40">
+              <select
+                className="form-select height-40"
+                onChange={(event) => setSelectedEventType(event.target.value)}
+              >
                 <option value="">Select Event Type</option>
                 <option value="Online">Online</option>
                 <option value="Offline">Offline</option>
@@ -42,13 +53,14 @@ const EventCardDisplay = () => {
           </div>
 
           <div className="row g-4 p-4">
-            {data?.map((event) => {
+            {filteredEventData?.map((event) => {
               const {
                 eventTitle,
                 eventImageUrl,
                 eventStartDateTime,
                 eventAttendeeCount,
                 isEventFree,
+                eventType,
                 eventCost,
                 eventAddress,
                 hostedBy,
@@ -93,8 +105,14 @@ const EventCardDisplay = () => {
                           </span>
                         </p>
                         <p>
-                          <GrLocation className="icon-large text-secondary" />{" "}
-                          {eventAddress}
+                          {eventType === "Online" ? (
+                            <span className="fw-semibold ">Online</span>
+                          ) : (
+                            <>
+                              <GrLocation className="icon-large text-secondary" />{" "}
+                              {eventAddress}
+                            </>
+                          )}
                         </p>
                       </div>
                     </div>
