@@ -11,6 +11,7 @@ const EventQuickInfo = ({ event }) => {
     eventEndDateTime,
     eventAddress,
     isEventFree,
+    eventType,
     eventCost,
     speakers,
   } = event;
@@ -32,12 +33,18 @@ const EventQuickInfo = ({ event }) => {
               </Link>
             </div>
           </div>
-          <div className="d-flex align-items-start mb-3">
-            <GrLocation className="icon-large text-secondary" />
-            <div className="ml-3 ps-3">
-              <p className="mb-0">{eventAddress}</p>
+
+          {eventType === "Online" ? (
+            <p className="fw-semibold ">Online</p>
+          ) : (
+            <div className="d-flex align-items-start mb-3">
+              <GrLocation className="icon-large text-secondary" />
+              <div className="ml-3 ps-3">
+                <p className="mb-0">{eventAddress}</p>
+              </div>
             </div>
-          </div>
+          )}
+
           {isEventFree ? (
             <p className="fw-bold mb-0">Free</p>
           ) : (
